@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>webservicetests</groupId>
+	<artifactId>webserviceTests</artifactId>
+	<version>7.7.3</version>
+	<inceptionYear>2017</inceptionYear>
+	<name>webserviceTests</name>
+	<packaging>jar</packaging>
+	<description>Web-Service sample project for LogicalDOC 7.7.3</description>
+	<organization/>
+	<url />
+	<developers>
+		<developer>
+			<name>Alessandro Gasparini</name>
+			<id>alessandro</id>
+			<organization>LogicalDOC</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+	<scm>
+		<connection />
+		<developerConnection />
+	</scm>
+
+
+  <properties>
+    <spring.version>4.3.5.RELEASE</spring.version>
+    <hibernate.version>4.1.12.Final</hibernate.version>
+    <ehcache.version>2.6.6</ehcache.version>
+    <lucene.version>6.3.0</lucene.version>
+    <solr.version>6.3.0</solr.version>
+    <gwt.version>2.6.1</gwt.version>
+    <smartgwt.version>6.0p</smartgwt.version>
+    <cxf.version>3.1.6</cxf.version>
+    <slf4j.version>1.7.7</slf4j.version>
+    <ant.version>1.8.2</ant.version>
+    <logicaldoc.version>7.7.3</logicaldoc.version>
+  </properties>
+ 
+	<dependencies>
+		<dependency>
+			<groupId>com.logicaldoc</groupId>
+			<artifactId>logicaldoc-webservice</artifactId>
+			<version>${logicaldoc.version}</version>
+			<type>jar</type>
+		</dependency>	
+		<dependency>
+			<groupId>com.logicaldoc</groupId>
+			<artifactId>logicaldoc-core</artifactId>
+			<version>${logicaldoc.version}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.logicaldoc</groupId>
+			<artifactId>logicaldoc-util</artifactId>
+			<version>${logicaldoc.version}</version>
+			<type>jar</type>
+		</dependency>	    		
+          
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>	
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>						
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>           
+        </dependency>
+        			
+	</dependencies>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>iso-8859-1</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting/>
+
+		<repositories>
+		<repository>
+			<id>ibiblio</id>
+			<name>Ibiblio Repository</name>
+			<url>http://www.ibiblio.org/maven2</url>
+		</repository>
+		<repository>
+			<id>logicaldoc</id>
+			<name>LogicalDOC Repository</name>
+			<url>http://logicaldoc.sourceforge.net/maven</url>
+		</repository>
+	</repositories>
+	
+	
+	<distributionManagement />
+</project>
